@@ -7,5 +7,15 @@
         <item>Multiplication</item>
         <item>Division</item>
     </string-array>
+    <string name="addition">+</string>
+    <string name="subtraction">-</string>
+    <string name="multiplication">x</string>
+    <string name="division">/</string>
+
+    <string name="answer">ANSWER</string>
+
+    <string name="generate">GENERATE</string>
+    <string name="submit">SUBMIT</string>
+
 
 </resources>
