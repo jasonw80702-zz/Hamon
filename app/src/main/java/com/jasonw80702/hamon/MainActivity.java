@@ -119,12 +119,16 @@ public class MainActivity extends AppCompatActivity {
                 String currentSelected = adapterView.getItemAtPosition(i).toString();
                 if (currentSelected.equals("Addition")) {
                     symbol.setText(getResources().getString(R.string.addition));
+                    generateNumbers(view);
                 } else if (currentSelected.equals("Subtraction")) {
                     symbol.setText(getResources().getString(R.string.subtraction));
+                    generateNumbers(view);
                 } else if (currentSelected.equals("Multiplication")) {
                     symbol.setText(getResources().getString(R.string.multiplication));
+                    generateNumbers(view);
                 } else {
                     symbol.setText(getResources().getString(R.string.division));
+                    generateNumbers(view);
                 }
             }
 
