@@ -17,5 +17,8 @@
     <string name="generate">GENERATE</string>
     <string name="submit">SUBMIT</string>
 
+    <string name="correct">Correct! Good job!</string>
+    <string name="incorrect">Incorrect! Try again!</string>
+
 
 </resources>

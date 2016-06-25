@@ -1,14 +1,73 @@
 package com.jasonw80702.hamon;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.util.Log;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void generateNumbers(View view) {
+        EditText answerOne = (EditText) findViewById(R.id.number1);
+        EditText answerTwo = (EditText) findViewById(R.id.number2);
+
+        Random rng = new Random();
+        int numberOne = rng.nextInt(30) + 1;
+        int numberTwo = rng.nextInt(30) + 1;
+        String number1 = String.valueOf(numberOne);
+        String number2 = String.valueOf(numberTwo);
+
+        answerOne.setText(number1);
+        answerTwo.setText(number2);
+    }
+
+    // submit answer in EditText
+    public void submitAnswer(View view) {
+        EditText userAnswer = (EditText) findViewById(R.id.userInput);
+        int userAnswerInt = Integer.parseInt(userAnswer.getText().toString());
+
+        EditText answerOne = (EditText) findViewById(R.id.number1);
+        int answerOneInt = Integer.parseInt(answerOne.getText().toString());
+
+        EditText answerTwo = (EditText) findViewById(R.id.number2);
+        int answerTwoInt = Integer.parseInt(answerTwo.getText().toString());
+
+        EditText currentSymbol = (EditText) findViewById(R.id.symbol);
+        String symbol = currentSymbol.getText().toString();
+
+        if (symbol.equals("+")) {
+            if (userAnswerInt == (answerOneInt + answerTwoInt)) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+            }
+        } else if (symbol.equals("-")) {
+            if (userAnswerInt == (answerOneInt - answerTwoInt)) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+            }
+        } else if (symbol.equals("x")) {
+            if (userAnswerInt == (answerOneInt * answerTwoInt)) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+            }
+        } else {
+            if (userAnswerInt == (answerOneInt / answerTwoInt)) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

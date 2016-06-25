@@ -108,10 +108,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/generate"
-        android:id="@+id/button"
+        android:id="@+id/generateBtn"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:singleLine="false" />
+        android:singleLine="false"
+        android:nestedScrollingEnabled="false"
+        android:onClick="generateNumbers" />
 
     <EditText
         android:layout_width="160dp"
@@ -122,7 +124,7 @@
         android:id="@+id/userInput"
         android:textSize="40sp"
         android:layout_marginTop="48dp"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/generateBtn"
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
@@ -132,10 +134,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit"
-        android:id="@+id/button2"
+        android:id="@+id/submitBtn"
         android:layout_below="@+id/userInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp"
+        android:onClick="submitAnswer" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,7 +147,7 @@
         android:id="@+id/textView2"
         android:textColor="#000000"
         android:layout_marginTop="32dp"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/generateBtn"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
