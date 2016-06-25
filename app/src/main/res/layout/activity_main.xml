@@ -115,39 +115,114 @@
         android:nestedScrollingEnabled="false"
         android:onClick="generateNumbers" />
 
-    <EditText
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:inputType="number"
-        android:ems="10"
-        android:background="@drawable/styyles"
-        android:id="@+id/userInput"
-        android:textSize="40sp"
-        android:layout_marginTop="48dp"
-        android:layout_below="@+id/generateBtn"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000"
-        android:textColorHighlight="#ffffff" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit"
         android:id="@+id/submitBtn"
-        android:layout_below="@+id/userInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:onClick="submitAnswer" />
+        android:onClick="submitAnswer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/generateBtn"
+        android:layout_alignEnd="@+id/generateBtn" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/answer"
-        android:id="@+id/textView2"
-        android:textColor="#000000"
-        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:layout_below="@+id/generateBtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/answer"
+            android:id="@+id/textView2"
+            android:textColor="#000000"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:inputType="number"
+            android:ems="10"
+            android:background="@drawable/styyles"
+            android:id="@+id/userInput"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textColorHighlight="#ffffff" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignBottom="@+id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/styyles">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/combo"
+                android:id="@+id/combo"
+                android:textColor="#000000"
+                android:padding="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"
+                android:id="@+id/comboNumber"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:padding="5dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/styyles">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:id="@+id/total"
+                android:textColor="#000000"
+                android:padding="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"
+                android:id="@+id/totalNumber"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:padding="5dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </TableRow>
+    </TableLayout>
 
 </RelativeLayout>

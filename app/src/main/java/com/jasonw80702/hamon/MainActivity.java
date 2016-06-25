@@ -48,11 +48,20 @@ public class MainActivity extends AppCompatActivity {
 
     // submit answer in EditText
     public void submitAnswer(View view) {
+
+        // answers
         EditText userAnswer = (EditText) findViewById(R.id.userInput);
         String userAnswerStr = userAnswer.getText().toString().trim();
         EditText answerOne = (EditText) findViewById(R.id.number1);
         EditText answerTwo = (EditText) findViewById(R.id.number2);
 
+        // statistics
+        EditText combo = (EditText) findViewById(R.id.comboNumber);
+        EditText total = (EditText) findViewById(R.id.totalNumber);
+        int comboNumber = Integer.parseInt(combo.getText().toString());
+        int totalNumber = Integer.parseInt(total.getText().toString());
+
+        // symbol
         EditText currentSymbol = (EditText) findViewById(R.id.symbol);
         String symbol = currentSymbol.getText().toString();
 
@@ -67,32 +76,82 @@ public class MainActivity extends AppCompatActivity {
                 if (userAnswerInt == (answerOneInt + answerTwoInt)) {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
                     generateNumbers(view);
+                    comboNumber++;
+                    totalNumber++;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
+
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+                    totalNumber++;
+                    comboNumber = 0;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 }
             } else if (symbol.equals("-")) {
                 if (userAnswerInt == (answerOneInt - answerTwoInt)) {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
                     generateNumbers(view);
+                    comboNumber++;
+                    totalNumber++;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+                    totalNumber++;
+                    comboNumber = 0;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 }
             } else if (symbol.equals("x")) {
                 if (userAnswerInt == (answerOneInt * answerTwoInt)) {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
                     generateNumbers(view);
+                    comboNumber++;
+                    totalNumber++;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+                    totalNumber++;
+                    comboNumber = 0;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 }
             } else {
                 if (userAnswerInt == (answerOneInt / answerTwoInt)) {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct), Toast.LENGTH_LONG).show();
                     generateNumbers(view);
+                    comboNumber++;
+                    totalNumber++;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
+                    totalNumber++;
+                    comboNumber = 0;
+                    String updatedCombo = String.valueOf(comboNumber);
+                    String updatedTotal = String.valueOf(totalNumber);
+                    combo.setText(updatedCombo);
+                    total.setText(updatedTotal);
                 }
             }
         }
+
     }
 
 
@@ -137,5 +196,8 @@ public class MainActivity extends AppCompatActivity {
                 symbol.setText(getResources().getString(R.string.addition));
             }
         });
+
+        EditText combo = (EditText) findViewById(R.id.comboNumber);
+        combo.setText("0");
     }
 }
