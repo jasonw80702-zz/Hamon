@@ -20,5 +20,7 @@
     <string name="correct">Correct! Good job!</string>
     <string name="incorrect">Incorrect! Try again!</string>
 
+    <string name="noinput">Oops, you didn\'t enter anything!</string>
+
 
 </resources>
