@@ -2,4 +2,5 @@
 
 Basic arithmetic Android App
 
-v.0
+Version v.1
+
