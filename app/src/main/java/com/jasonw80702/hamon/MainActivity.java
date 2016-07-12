@@ -78,19 +78,19 @@ public class MainActivity extends AppCompatActivity {
                     generateNumbers(view);
                     comboNumber++;
                     totalNumber++;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
 
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
                     totalNumber++;
                     comboNumber = 0;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
                 }
             } else if (symbol.equals("-")) {
                 if (userAnswerInt == (answerOneInt - answerTwoInt)) {
@@ -98,18 +98,18 @@ public class MainActivity extends AppCompatActivity {
                     generateNumbers(view);
                     comboNumber++;
                     totalNumber++;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
                     totalNumber++;
                     comboNumber = 0;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
                 }
             } else if (symbol.equals("x")) {
                 if (userAnswerInt == (answerOneInt * answerTwoInt)) {
@@ -117,18 +117,18 @@ public class MainActivity extends AppCompatActivity {
                     generateNumbers(view);
                     comboNumber++;
                     totalNumber++;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
                     totalNumber++;
                     comboNumber = 0;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
                 }
             } else {
                 if (userAnswerInt == (answerOneInt / answerTwoInt)) {
@@ -136,20 +136,21 @@ public class MainActivity extends AppCompatActivity {
                     generateNumbers(view);
                     comboNumber++;
                     totalNumber++;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+//                    String updatedCombo = String.valueOf(comboNumber);
+//                    String updatedTotal = String.valueOf(totalNumber);
+//                    combo.setText(updatedCombo);
+//                    total.setText(updatedTotal);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect), Toast.LENGTH_LONG).show();
                     totalNumber++;
                     comboNumber = 0;
-                    String updatedCombo = String.valueOf(comboNumber);
-                    String updatedTotal = String.valueOf(totalNumber);
-                    combo.setText(updatedCombo);
-                    total.setText(updatedTotal);
+
                 }
             }
+            String updatedCombo = String.valueOf(comboNumber);
+            String updatedTotal = String.valueOf(totalNumber);
+            combo.setText(updatedCombo);
+            total.setText(updatedTotal);
         }
 
     }
